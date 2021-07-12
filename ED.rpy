@@ -4,7 +4,7 @@ init -990 python:
         author="ChrisLad",
         name="Extra Dialogue",
         description="Adds fitting dialogue to Monika",
-        version="1.0.1"
+        version="1.0.2"
     )
 
 # Register the updater
@@ -14,17 +14,16 @@ init -989 python:
             submod="Extra Dialogue",
             user_name="ChrisLad1",
             repository_name="ExtraDialogue",
-            update_dir="",
+            update_dir="game",
             attachment_id=None
         )
     
-
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
             eventlabel="monika_truthful",
-            category=["ED v1.0.1"],
+            category=["ED"],
             prompt="Being together forever",
             pool=True,
             random=True,
@@ -43,3 +42,22 @@ label monika_truthful:
     m 5hubftpa "I love you so much [player]~."
    
     return "love"
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_promotional",
+            category=["ED"],
+            prompt="Credits",
+            pool=True,
+            random=True,
+            unlocked=True
+        )
+    )
+
+label monika_promotional:
+
+    m 1rkc "test"
+
+    return
