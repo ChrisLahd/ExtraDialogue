@@ -16,7 +16,7 @@ cd "GAME DIR"
 git clone https://github.com/ChrisLad1/ExtraDialogue/ -o /game
 ```
 ### Windows
-Download the submod [here](https://github.com/ChrisLad1/ExtraDialogue/releases/download/ED.rpy) and put the file into the "game" directory. [Here](https://imgur.com/UJRsGEw) is an example
+Download the submod [here](https://github.com/ChrisLad1/ExtraDialogue/releases/latest/ED.py) and put the file into the "game" directory. [Here](https://imgur.com/UJRsGEw) is an example
 
 ### Mac
 Same process as Windows.
