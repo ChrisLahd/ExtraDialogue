@@ -31,7 +31,7 @@ init 5 python:
         )
     )
 
-label monika_truthful:
+label monika_truthful:,
    
     m 1rkc "I know [player], you are just as worried as I am..."
     m 1ekc "I realise that we won't be able to be together until the end..."
