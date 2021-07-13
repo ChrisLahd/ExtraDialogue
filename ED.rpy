@@ -58,6 +58,6 @@ init 5 python:
 
 label monika_promotional:
 
-    m 1rkc "test"
+    m 1cke "This is a mod made by ChrisLad1 on GitHub"
 
     return
