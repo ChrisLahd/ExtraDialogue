@@ -58,6 +58,24 @@ init 5 python:
 
 label monika_promotional:
 
-    m 1cke "This is a mod made by ChrisLad1 on GitHub"
+    m 1enc "This is a mod made by ChrisLad1 on GitHub"
+    m 7enc "You can view it {a="https://GitHub.com/ChrisLad1/ExtraDialogue"} Here"
+    m 7rkc "That is if you haven't somehow downloaded this already."
 
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_proud",
+            category=["ED"],
+            prompt=["I did something today."]
+            pool=True,
+            unlocked=True
+        )
+    )
+
+label monika_proud:
+
+    m 1ekc "WIP"   
