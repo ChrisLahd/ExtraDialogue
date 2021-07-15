@@ -13,7 +13,7 @@ This submod adds additional dialogue to Monika and her character / personality. 
 ### Linux
 ```bash
 cd "GAME DIR"
-git clone https://github.com/ChrisLad1/ExtraDialogue/ -o /game
+git clone https://github.com/ChrisLad1/ExtraDialogue/ -o game/submods/ED
 ```
 ### Windows
 Download the submod [here](https://github.com/ChrisLad1/ExtraDialogue/releases/latest) and put the file into the "game" directory. [Here](https://imgur.com/UJRsGEw) is an example
