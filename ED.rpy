@@ -14,7 +14,7 @@ init -989 python:
             submod="Extra Dialogue",
             user_name="ChrisLad1",
             repository_name="ExtraDialogue",
-            update_dir="game",
+            update_dir="game/Submods/ED",
             attachment_id=None
         )
     
