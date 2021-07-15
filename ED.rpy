@@ -4,7 +4,7 @@ init -990 python:
         author="ChrisLad",
         name="Extra Dialogue",
         description="Adds fitting dialogue to Monika",
-        version="1.0.2"
+        version="1.0.3"
     )
 
 # Register the updater
