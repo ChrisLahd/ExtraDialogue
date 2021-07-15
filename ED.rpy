@@ -32,7 +32,15 @@ init 5 python:
     )
 
 label monika_truthful:
-   
+
+    $ amt = mas_getEV("monika_truthful")
+        
+    if amt.shown_count >= 3 or EV_ACT_RANDOM != True:
+
+        m 1ekc "[player], maybe this isn't something we should discuss again."
+    
+    else:
+
     m 1rkc "I know [player], you are just as worried as I am..."
     m 1ekc "I realise that we won't be able to be together until the end..."
     m 7rktpc "Whether it be I don't get to see you in your world.."
@@ -78,4 +86,29 @@ init 5 python:
 
 label monika_proud:
 
-    m 1ekc "WIP"   
+    m 1ekc "Wow!, what did you do [player]?{nw}"
+    $ _history_list.pop()
+
+    menu:
+
+        m "Wow!, what did you do [player]?{fast}"
+
+        "I achieved one of my goals.":
+
+            m 1enc "Wow!, I am so happy for you!"
+            m 7enc "You really do amaze me [player]!"
+            m 7rkc "Just remember, never stop trying even if you are ahead of yourself. That is the best way to keep a self-motive mindset."
+            m 1enc "Which means you can share more of your acomplishments with me~"
+            m 1enc "Ehehe~"
+
+        "I went somewhere.":
+
+            m 1enc "[player], thats great!"
+            m 1ekc "[player], you didn't tell me we were going out though."
+            m 1rkc "I-It's fine but... I wish I knew is all."
+            m 7enc "All the matter is that you are here now, [player]~"
+
+        "More coming soon!":
+
+            m 1enc "You heard him~ :)"
+            
