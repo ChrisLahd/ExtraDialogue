@@ -116,7 +116,7 @@ label monika_proud:
                 "A slow progessive task":
     
                     m 1hsb "Thats great!"
-                    m 1sud "The patence you have for long dedicational tasks is amazing!"
+                    m 1sud "The patience you have for long dedicational tasks is amazing!"
                     m 7rusdrb "Sorry... that sounded really formal for some reason."
                     m 1hsb "If I get like that again let me know and I'll try to stop, haha~"
     
@@ -148,20 +148,21 @@ label monika_sus:
     
     $ amt = mas_getEV("monika_sus")
 
-    if amt.shown_count > 1:
+    if amt.shown_count >= 2:
 
-        m 7rusdrb "What I was going to say before I stopped myself was.."
-        m 7eusdrb "Would we-.."
-        m 7ekcdrb "Make... L- Love?{nw}"
+        m 3rkbssdra "What I was going to say before I stopped myself was.."
+        m 3fkbsb "Would we-.."
+        m 5skbssdru "Make... L- Love?{nw}"
 
         menu:
 
-            "That is upto you to decice. Because I love you.":
+            m "That is upto you to decice. Because I love you.":
 
                 m 7rusdrb "Thank you, [player]"
                 m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
                 m 7euu "But lets leave that for another time. Okay [player]?"
-    
+                m 
+
     else:
 
         m 7rusdrb "Well not to be weird..."
@@ -169,4 +170,4 @@ label monika_sus:
         m 7rusdrb "Would we- umm.."
         m 7sub "Ne- Nevermind~"
 
-    
+    return "
