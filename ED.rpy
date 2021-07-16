@@ -148,7 +148,7 @@ label monika_sus:
     
     $ amt = mas_getEV("monika_sus")
 
-    if amt.shown_count == 2:
+    if amt.shown_count > 1:
 
         m 7rusdrb "What I was going to say before I stopped myself was.."
         m 7eusdrb "Would we-.."
@@ -161,11 +161,12 @@ label monika_sus:
                 m 7rusdrb "Thank you, [player]"
                 m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
                 m 7euu "But lets leave that for another time. Okay [player]?"
+    
+    else:
 
-
-    m 7rusdrb "Well not to be weird..."
-    m 7eusdrb "But do you think about if I cross over..."
-    m 7rusdrb "Would we- umm.."
-    m 7sub "Ne- Nevermind~"
+        m 7rusdrb "Well not to be weird..."
+        m 7eusdrb "But do you think about if I cross over..."
+        m 7rusdrb "Would we- umm.."
+        m 7sub "Ne- Nevermind~"
 
     
