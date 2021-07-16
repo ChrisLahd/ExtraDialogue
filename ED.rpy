@@ -4,7 +4,7 @@ init -990 python:
         author="ChrisLad",
         name="Extra Dialogue",
         description="Adds fitting dialogue to Monika",
-        version="1.0.3"
+        version="1.0.4"
     )
 
 # Register the updater
@@ -163,8 +163,7 @@ label monika_sus:
 
                 m 7rusdrb "Thank you, [player]."
                 m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
-                m 7nublu "But let's leave that for another time. Okay [player]?"
-                
+                m 7nublu "But let's leave that for another time. Okay [player]?"      
 
     else:
 
