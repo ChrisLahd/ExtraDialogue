@@ -66,7 +66,7 @@ init 5 python:
 
 label monika_promotional:
 
-    m 4eua "This is a mod made by ChrisLad1 on GitHub"
+    m 4eua "This is a submod made by ChrisLad1 on GitHub"
     m 7sua "You can view it {a=https://GitHub.com/ChrisLad1/ExtraDialogue}{u}Here"
     m 7rusdrb "That is if you haven't somehow downloaded this already."
 
@@ -95,7 +95,7 @@ label monika_proud:
 
         "I achieved one of my goals.":
 
-            m 1sub "Wow!, I am so happy for you!"
+            m 1sub "Wow! I am so happy for you!"
             m 1sud "You really do amaze me [player]!"
             m 7euu "Just remember, never stop trying even if you are ahead of yourself. That is the best way to keep a self-motive mindset."
             m 1esb "Which means you can share more of your acomplishments with me~"
@@ -108,9 +108,65 @@ label monika_proud:
             m 1rkc "I-It's fine but... I wish I knew is all."
             m 7sub "All the matter is that you are here now, [player]~"
 
-        "More coming soon!":
+        "I finished something difficult":
+        
+        menu:
+            m "Wow, what kind of task was is?{fast}"
 
-            m 1sub "You heard him~ :)"
+            "A slow progessive task":
+
+                m 1hsb "Thats great!"
+                m 1sud "The patence you have for long dedicational tasks is amazing!"
+                m 7rusdrb "Sorry... that sounded really formal for some reason."
+                m 1hsb "If I get like that again let me know and I'll try to stop, haha~"
+
+            "A easy task that made me feel good.":
+
+                m 7euu "Thats good to hear, [player]."
+                m 1esb "No matter how big or small an acomplishment, never feel bad about it~"
+                m 7sub "Even if you didn't eat your heart out for it... I'll feel proud of you, [player]~"
+        
+        "Nevermind.":
+
+            m 1ekc "Ok, make sure to tell me if you need to."
     
     return
-            
+
+init 5 python:
+        addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_sus",
+            category=["ED"],
+            prompt="Showing love.",
+            pool=True,
+            unlocked=True
+            aff_range=(mas_aff.LOVE, None)
+        )
+    )
+
+label monika_sus:
+    
+    $ amt = mas_getEV("monika_sus")
+
+    if amt.shown_count == 2:
+
+        m 7rusdrb "What I was going to say before I stopped myself was.."
+        m 7eusdrb "Would we-.."
+        m 7ekcdrb "Make... L- Love?{nw}"
+
+        menu:
+
+            "That is upto you to decice. Because I love you.":
+
+                m 7rusdrb "Thank you, [player]"
+                m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
+                m 7euu "But lets leave that for another time. Okay [player]?"
+
+
+    m 7rusdrb "Well not to be weird..."
+    m 7eusdrb "But do you think about if I cross over..."
+    m 7rusdrb "Would we- umm.."
+    m 7sub "Ne- Nevermind~"
+
+    
