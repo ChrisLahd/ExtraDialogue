@@ -110,21 +110,21 @@ label monika_proud:
 
         "I finished something difficult":
         
-        menu:
-            m "Wow, what kind of task was is?{fast}"
-
-            "A slow progessive task":
-
-                m 1hsb "Thats great!"
-                m 1sud "The patence you have for long dedicational tasks is amazing!"
-                m 7rusdrb "Sorry... that sounded really formal for some reason."
-                m 1hsb "If I get like that again let me know and I'll try to stop, haha~"
-
-            "A easy task that made me feel good.":
-
-                m 7euu "Thats good to hear, [player]."
-                m 1esb "No matter how big or small an acomplishment, never feel bad about it~"
-                m 7sub "Even if you didn't eat your heart out for it... I'll feel proud of you, [player]~"
+            menu:
+                m "Wow, what kind of task was is?{fast}"
+    
+                "A slow progessive task":
+    
+                    m 1hsb "Thats great!"
+                    m 1sud "The patence you have for long dedicational tasks is amazing!"
+                    m 7rusdrb "Sorry... that sounded really formal for some reason."
+                    m 1hsb "If I get like that again let me know and I'll try to stop, haha~"
+    
+                "A easy task that made me feel good.":
+    
+                    m 7euu "Thats good to hear, [player]."
+                    m 1esb "No matter how big or small an acomplishment, never feel bad about it~"
+                    m 7sub "Even if you didn't eat your heart out for it... I'll feel proud of you, [player]~"
         
         "Nevermind.":
 
@@ -141,7 +141,6 @@ init 5 python:
             prompt="Showing love.",
             pool=True,
             unlocked=True
-            aff_range=(mas_aff.LOVE, None)
         )
     )
 
