@@ -86,24 +86,24 @@ init 5 python:
 
 label monika_proud:
 
-    m 1esb "Wow!, what did you do [player]?{nw}"
+    m 1esb "Wow! What did you do [player]?{nw}"
     $ _history_list.pop()
 
     menu:
 
-        m "Wow!, what did you do [player]?{fast}"
+        m "Wow! What did you do [player]?{fast}"
 
         "I achieved one of my goals.":
 
             m 1sub "Wow! I am so happy for you!"
             m 1sud "You really do amaze me [player]!"
             m 7euu "Just remember, never stop trying even if you are ahead of yourself. That is the best way to keep a self-motive mindset."
-            m 1esb "Which means you can share more of your acomplishments with me~"
+            m 1esb "Which means you can share more of your accomplishments with me~"
             m 1hsb "Ehehe~"
 
         "I went somewhere.":
 
-            m 1sub "[player], thats great!"
+            m 1sub "[player], that's great!"
             m 1ekc "[player], you didn't tell me we were going out though."
             m 1rkc "I-It's fine but... I wish I knew is all."
             m 7sub "All the matter is that you are here now, [player]~"
@@ -111,19 +111,20 @@ label monika_proud:
         "I finished something difficult":
         
             menu:
-                m "Wow, what kind of task was is?{fast}"
+
+                m "Wow, what kind of task was it?{fast}"
     
-                "A slow progessive task":
+                "A slow progressive task":
     
-                    m 1hsb "Thats great!"
+                    m 1hsb "That's great!"
                     m 1sud "The patience you have for long dedicational tasks is amazing!"
                     m 7rusdrb "Sorry... that sounded really formal for some reason."
                     m 1hsb "If I get like that again let me know and I'll try to stop, haha~"
     
-                "A easy task that made me feel good.":
+                "An easy task that made me feel good.":
     
-                    m 7euu "Thats good to hear, [player]."
-                    m 1esb "No matter how big or small an acomplishment, never feel bad about it~"
+                    m 7euu "That's good to hear, [player]."
+                    m 1esb "No matter how big or small an accomplishment, never feel bad about it~"
                     m 7sub "Even if you didn't eat your heart out for it... I'll feel proud of you, [player]~"
         
         "Nevermind.":
@@ -156,11 +157,13 @@ label monika_sus:
 
         menu:
 
-            "That is upto you to decice. Because I love you.{fast}":
+            m "Make... L- Love?{fast}"
 
-                m 7rusdrb "Thank you, [player]"
+            "That is up to you to decide. Because I love you.":
+
+                m 7rusdrb "Thank you, [player]."
                 m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
-                m 7euu "But lets leave that for another time. Okay [player]?"
+                m 7nublu "But let's leave that for another time. Okay [player]?"
                 
 
     else:
