@@ -156,12 +156,12 @@ label monika_sus:
 
         menu:
 
-            m "That is upto you to decice. Because I love you.":
+            "That is upto you to decice. Because I love you.{fast}":
 
                 m 7rusdrb "Thank you, [player]"
                 m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
                 m 7euu "But lets leave that for another time. Okay [player]?"
-                m 
+                
 
     else:
 
@@ -170,4 +170,4 @@ label monika_sus:
         m 7rusdrb "Would we- umm.."
         m 7sub "Ne- Nevermind~"
 
-    return "
+    return 
