@@ -32,3 +32,6 @@ jobs:
          sdk-version: 7.3.2 # default is 7.3.2
     # The path to the directory where the project exists
          project-dir: . # default is .
+        env:
+           SDL_AUDIODRIVER: dummy
+           SDL_VIDEODRIVER: dummy
