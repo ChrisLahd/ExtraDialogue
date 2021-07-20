@@ -183,7 +183,6 @@ init 5 python:
             eventlabel="monika_depressed",
             category=["ED", "life", "feelings"],
             prompt="Being Depressed",
-            action=EV_ACT_UNLOCK
             pool=True,
             random=True
         )
