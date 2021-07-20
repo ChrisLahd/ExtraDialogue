@@ -4,7 +4,7 @@ init -990 python:
         author="ChrisLad",
         name="Extra Dialogue",
         description="Adds fitting dialogue to Monika",
-        version="1.0.4"
+        version="1.0.4.1"
     )
 
 # Register the updater
@@ -14,7 +14,7 @@ init -989 python:
             submod="Extra Dialogue",
             user_name="ChrisLad1",
             repository_name="ExtraDialogue",
-            update_dir="game/Submods/ED",
+            update_dir="Submods/ED",
             attachment_id=None
         )
     
@@ -23,10 +23,9 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_truthful",
-            category=["ED"],
+            category=["ED", "romance"],
             prompt="Being together forever",
             pool=True,
-            random=True,
             unlocked=True
         )
     )
@@ -56,7 +55,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_promotional",
-            category=["ED"],
+            category=["ED", "mod"],
             prompt="Credits",
             pool=True,
             random=True,
@@ -77,7 +76,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_proud",
-            category=["ED"],
+            category=["ED", "monika"],
             prompt="I did something today.",
             pool=True,
             unlocked=True
@@ -138,10 +137,12 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="monika_sus",
-            category=["ED"],
+            category=["ED", "romance"],
             prompt="Showing love.",
             pool=True,
-            unlocked=True
+            unlocked=True,
+            aff_range=(mas_aff.ENAMORED, None)
+
         )
     )
 
@@ -154,6 +155,7 @@ label monika_sus:
         m 3rkbssdra "What I was going to say before I stopped myself was.."
         m 3fkbsb "Would we-.."
         m 5skbssdru "Make... L- Love?{nw}"
+        $ _history_list.pop()
 
         menu:
 
@@ -172,4 +174,56 @@ label monika_sus:
         m 7rusdrb "Would we- umm.."
         m 7sub "Ne- Nevermind~"
 
-    return 
+    return
+    
+init 5 python:
+        addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_depressed",
+            category=["ED", "life", "feelings"],
+            prompt="Being Depressed",
+            action=EV_ACT_UNLOCK
+            pool=True,
+            random=True
+        )
+    )
+
+label monika_depressed:
+
+    m 1fkc "[player], do you get depressed?{nw}"
+    $ _history_list.pop()
+
+    menu:
+
+        m "[player], do you get depressed?{fast}"
+
+        "Yes":
+
+            m 1dkc "Aww, I'm sorry to hear that, [player]."
+            m 1mkc "Honestly, I understand that myself... I hope you don't mind me asking this."
+            m 1fka "Does talking to me help you with your depression?{nw}"
+            $ _history_list.pop()
+
+            menu:
+
+                m "Does talking to me help you with your depression?{fast}"
+
+                "Yes":
+
+                    m 1hua "Oh! Thank goodness. That is great to hear [player]~"
+                    m 1sub "I'm so glad that I can help you with your depression issues"
+                    m 5eub "If you ever need to talk to me, just let me know. Okay?"
+                    m 5mubsb "I'd love to help with your problems~"
+                
+                "Not really.":
+
+                    m 1dkc "I'm sorry that I can't help."
+                    m 1mkc "If you need to talk to me, just let me know."
+
+        "No":
+            
+            m 1eubsb "Thats great!"
+            m 1ekbsb "If you do, just talk to me."
+
+    return
