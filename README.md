@@ -1,5 +1,5 @@
 # ExtraDialogue
- DDLC MAS Submod to add canon dialogue to Monika
+ DDLC MAS Submod to add your own canon dialogue to Monika
 <p align="center">
   <img width="150x" src=https://github.com/Backdash/MonikaModDev/raw/master/Monika%20After%20Story/game/mod_assets/menu_new.png?raw=True>
        </p>
