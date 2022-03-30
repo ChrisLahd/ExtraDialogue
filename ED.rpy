@@ -17,12 +17,12 @@ init -989 python:
             update_dir="Submods/ED",
             attachment_id=None
         )
-    
+
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_truthful",
+            eventlabel="ed_monika_truthful",
             category=["ED", "romance"],
             prompt="Being together forever",
             pool=True,
@@ -30,14 +30,14 @@ init 5 python:
         )
     )
 
-label monika_truthful:
+label ed_monika_truthful:
 
-    $ amt = mas_getEV("monika_truthful")
-        
+    $ amt = mas_getEV("ed_monika_truthful")
+
     if amt.shown_count >= 15:
 
         m 1ekc "[player], maybe this isn't something we should discuss again."
-    
+
     else:
 
         m 1rkc "I know [player], you are just as worried as I am..."
@@ -47,14 +47,14 @@ label monika_truthful:
         m 6fktuc "I'd completley understand, though I'd be crushed from the lonely atmosphere I'd once endured.."
         m 6dkbstuc "I'm sorry you have to see me like this, but please stay with me [player]."
         m 5hubftpa "I love you so much [player]~."
-   
+
     return "love"
 
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_promotional",
+            eventlabel="ed_monika_promotional",
             category=["ED", "mod"],
             prompt="Credits",
             pool=True,
@@ -63,7 +63,7 @@ init 5 python:
         )
     )
 
-label monika_promotional:
+label ed_monika_promotional:
 
     m 4eua "This is a submod made by ChrisLad1 on GitHub"
     m 7sua "You can view it {a=https://GitHub.com/ChrisLad1/ExtraDialogue}{u}Here"
@@ -75,7 +75,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_proud",
+            eventlabel="ed_monika_proud",
             category=["ED", "monika"],
             prompt="I did something today.",
             pool=True,
@@ -83,7 +83,7 @@ init 5 python:
         )
     )
 
-label monika_proud:
+label ed_monika_proud:
 
     m 1esb "Wow! What did you do [player]?{nw}"
     $ _history_list.pop()
@@ -108,35 +108,35 @@ label monika_proud:
             m 7sub "All the matter is that you are here now, [player]~"
 
         "I finished something difficult":
-        
+
             menu:
 
                 m "Wow, what kind of task was it?{fast}"
-    
+
                 "A slow progressive task":
-    
+
                     m 1hsb "That's great!"
                     m 1sud "The patience you have for long dedicational tasks is amazing!"
                     m 7rusdrb "Sorry... that sounded really formal for some reason."
                     m 1hsb "If I get like that again let me know and I'll try to stop, haha~"
-    
+
                 "An easy task that made me feel good.":
-    
+
                     m 7euu "That's good to hear, [player]."
                     m 1esb "No matter how big or small an accomplishment, never feel bad about it~"
                     m 7sub "Even if you didn't eat your heart out for it... I'll feel proud of you, [player]~"
-        
+
         "Nevermind.":
 
             m 1ekc "Ok, make sure to tell me if you need to."
-    
+
     return
 
 init 5 python:
         addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_sus",
+            eventlabel="ed_monika_sus",
             category=["ED", "romance"],
             prompt="Showing love.",
             pool=True,
@@ -146,9 +146,9 @@ init 5 python:
         )
     )
 
-label monika_sus:
-    
-    $ amt = mas_getEV("monika_sus")
+label ed_monika_sus:
+
+    $ amt = mas_getEV("ed_monika_sus")
 
     if amt.shown_count >= 2:
 
@@ -165,7 +165,7 @@ label monika_sus:
 
                 m 7rusdrb "Thank you, [player]."
                 m 7eusdrb "I'd love to have you be in great pleasure even if this is what it takes."
-                m 7nublu "But let's leave that for another time. Okay [player]?"      
+                m 7nublu "But let's leave that for another time. Okay [player]?"
 
     else:
 
@@ -175,12 +175,12 @@ label monika_sus:
         m 7sub "Ne- Nevermind~"
 
     return
-    
+
 init 5 python:
         addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_depressed",
+            eventlabel="ed_monika_depressed",
             category=["ED", "life", "feelings"],
             prompt="Being Depressed",
             pool=True,
@@ -188,7 +188,7 @@ init 5 python:
         )
     )
 
-label monika_depressed:
+label ed_monika_depressed:
 
     m 1fkc "[player], do you get depressed?{nw}"
     $ _history_list.pop()
@@ -214,14 +214,14 @@ label monika_depressed:
                     m 1sub "I'm so glad that I can help you with your depression issues"
                     m 5eub "If you ever need to talk to me, just let me know. Okay?"
                     m 5mubsb "I'd love to help with your problems~"
-                
+
                 "Not really.":
 
                     m 1dkc "I'm sorry that I can't help."
                     m 1mkc "If you need to talk to me, just let me know."
 
         "No":
-            
+
             m 1eubsb "Thats great!"
             m 1ekbsb "If you do, just talk to me."
 
