@@ -51,6 +51,7 @@ label ed_monika_truthful:
     return "love"
 
 init 5 python:
+    label_prefix_map["ed_monika_"] = label_prefix_map["
     addEvent(
         Event(
             persistent.event_database,
